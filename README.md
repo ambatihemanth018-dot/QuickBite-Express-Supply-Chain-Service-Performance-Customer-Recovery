@@ -259,4 +259,4 @@ Focus: OTIF Performance, Customer Service Risk & Recovery
 ```text
 
 
-OT % = On-Time Orders / Total Orders
+
