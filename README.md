@@ -1,262 +1,220 @@
 
 
-# AtliQ Mart – Supply Chain Service Performance & Customer Recovery
+QuickBite Express – Supply Chain Service Performance & Customer Recovery
 
-## 📌 Project Overview
+📌 Project Overview
+QuickBite Express is an FMCG retailer operating across Surat, Ahmedabad, and Vadodara. The business is experiencing service-level issues that could affect customer satisfaction and contract renewals.
 
-AtliQ Mart is a growing FMCG retailer operating across **Surat, Ahmedabad, and Vadodara**.
+This project uses Power BI to analyze order fulfillment and delivery performance through On-Time (OT), In-Full (IF), and On-Time & In-Full (OTIF) metrics.
 
-The company is facing service-level issues that are putting customer relationships and contract renewals at risk. Management needs a way to monitor whether customer orders are delivered **On-Time (OT), In-Full (IF), and On-Time & In-Full (OTIF)** against agreed service targets.
+A Supply Chain Service Control Tower was developed to help management quickly identify:
 
-This project develops a **Supply Chain Service Control Tower** using Power BI to identify:
+Customers with significant service-level gaps
+Cities underperforming against OTIF targets
+Delivery delay patterns
+Products contributing to quantity shortfalls
+Major service failure categories
+Priority areas for operational recovery
 
-- Customers at high service risk
-- OTIF performance gaps
-- Delivery delays
-- Quantity shortfalls
-- City-level service performance
-- Major operational failure patterns
-- Areas requiring immediate recovery action
+The goal is to convert operational order data into actionable insights for improving service reliability and prioritizing customer recovery efforts.
 
-The objective is to transform operational order data into **actionable supply chain insights** that can support customer retention and service improvement.
+🎯 Business Problem
+QuickBite Express needs to improve service performance and protect customer relationships.
 
----
+Management needs answers to key business questions:
 
-## 🎯 Business Problem
+Is the business meeting its OTIF service target?
+Which customers have the largest OTIF gaps?
+Which cities are underperforming?
+Are service failures driven more by delivery delays or incomplete fulfillment?
+Which products contribute most to quantity shortfalls?
+Where are delivery delays concentrated?
+Which customers and operational areas should receive immediate recovery attention?
 
-AtliQ Mart is experiencing service-level failures that may lead to customer dissatisfaction and non-renewal of contracts.
+📊 Dashboard Preview
 
-Management wants to answer:
+1. Supply Chain Service Control Tower
+The executive dashboard provides an overview of overall service performance, customer risk, city-level performance, daily OTIF trends, and order service categories.
 
-1. What is the overall OTIF performance?
-2. How far is OTIF performance from the target?
-3. Which cities have the largest service gaps?
-4. Which customers are at the highest service risk?
-5. Are failures caused mainly by late delivery or incomplete fulfillment?
-6. Which products contribute most to quantity shortfalls?
-7. How significant are delivery delays?
-8. Where should recovery efforts be prioritized?
+2. Service Failure & Customer Recovery
+The second dashboard page provides a deeper analysis of customer service risk, delivery delays, OTIF performance by customer, and products contributing to quantity shortfalls.
 
----
+📈 Key Performance Indicators
 
-## 📊 Key Performance Indicators
+KPI	                 Result
+Total Orders	       31,729
+OT %	               59.0%
+IF %	               52.8%
+OTIF %	             29.0%
+OTIF Target	         75.0%
+OTIF Gap	           -46.0 pp
 
-| KPI |                     Result |
-|---|---:|
-| Total Orders             | 31,729 |
-| OTIF %                   | 29.0% |
-| OTIF Target              | 75.0% |
-| OTIF Gap                 | -46.0 pp |
-| On-Time (OT) %           | 59.0% |
-| In-Full (IF) %           | 52.8% |
+Key Finding - Overall OTIF performance is 29.0%, compared with the 75.0% target, creating a 46 percentage-point gap.
+This indicates a substantial service-level performance issue and highlights the need to prioritize both customer recovery and operational improvement.
 
-### Key Finding
+🔎 Key Business Insights
 
-Overall OTIF performance is **29.0%**, significantly below the **75.0% target**, resulting in a **46 percentage-point performance gap**.
+1. OTIF performance is significantly below target
+The overall OTIF rate of 29.0% is well below the 75.0% target.
+This indicates that a large proportion of orders are failing to meet the required combination of timeliness and complete fulfillment.
 
-This indicates a significant service reliability issue requiring customer-level and operational recovery actions.
+3. Both delivery and fulfillment contribute to service failures
 
----
+The overall:
+OT % = 59.0%
+IF % = 52.8%
+OTIF % = 29.0%
 
-## 📈 Dashboard
+The relatively low IF performance indicates that incomplete order fulfillment is an important service issue, while delivery timeliness also remains a major concern.
 
-### Supply Chain Service Control Tower
+3. Customer service performance requires prioritization
+Customer-level OTIF analysis reveals differences in service performance across accounts.
+Customers with the largest negative OTIF gaps versus target should be treated as priority accounts for recovery and closer monitoring.
 
-The Power BI dashboard provides an executive-level view of service performance and recovery priorities.
+5. Quantity shortfalls are concentrated across products
+The product shortfall analysis identifies products contributing significantly to incomplete fulfillment.
 
-### Dashboard Components
+These products should be investigated for potential issues involving:
+Inventory availability
+Replenishment
+Demand planning
+Product allocation
+Stock availability
 
-#### 1. Daily OTIF Performance vs Target
-Tracks daily OTIF performance against the target to identify persistent service-level gaps.
+5. Delivery delays affect service reliability
+The delivery delay analysis shows the distribution of orders across different delivery-performance categories.
+This helps identify recurring delays and provides an operational starting point for improving delivery reliability.
 
-#### 2. Customer OTIF Gap vs Target
-Ranks customers based on their OTIF performance gap and highlights high-risk accounts requiring attention.
+🚨 Recovery Priorities - The analysis translates the identified service gaps into five practical recovery priorities.
 
-#### 3. City-wise OTIF Performance
-Compares OTIF performance across Surat, Ahmedabad, and Vadodara against the customer target.
+🔴 Priority 1 — Improve Overall OTIF
+Problem: OTIF performance is significantly below the 75% target.
 
-#### 4. Order Distribution by Service Performance
-Breaks down orders into:
+Recommended action:
+Focus on the largest contributors to OTIF failure and track performance at the customer, city, and operational levels.
 
-- On-Time & In-Full
-- On-Time but Not In-Full
-- Late but In-Full
-- Late & Not In-Full
+🟠 Priority 2 — Protect High-Risk Customers
+Problem: Some customers have substantially larger OTIF gaps than others.
 
-This helps identify whether service failures are driven by delivery delays, fulfillment issues, or both.
+Recommended action:
+Prioritize customers with the largest negative OTIF gaps and establish customer-specific recovery plans.
 
-#### 5. Products Driving Quantity Shortfall
-A treemap highlights products contributing most to quantity shortfalls.
+🟠 Priority 3 — Reduce Quantity Shortfalls
+Problem: Certain products contribute disproportionately to incomplete fulfillment.
 
-This helps prioritize inventory and replenishment investigations.
+Recommended action:
+Investigate inventory availability, replenishment, demand planning, and allocation for high-shortfall products.
 
-#### 6. Delivery Performance Distribution
-Shows the distribution of early, on-time, and delayed deliveries.
+🟡 Priority 4 — Reduce Delivery Delays
+Problem: Late deliveries reduce the probability of achieving OTIF.
 
-#### 7. Customer Service Risk Assessment
-Provides customer-level details including:
+Recommended action:
+Investigate recurring delivery delays and review dispatch, route planning, and delivery execution.
 
-- Total Orders
-- OTIF Orders
-- OTIF %
-- OTIF Target
-- OTIF Gap
+🟢 Priority 5 — Establish Continuous Service Monitoring
+Problem: Service failures can be difficult to manage using periodic reporting alone.
 
----
+Recommended action:
+Use OTIF as a recurring performance indicator and monitor it across:
+Daily → City → Customer → Product
 
-## 🔎 Key Insights
+📐 KPI Definitions
 
-### 1. OTIF performance is significantly below target
+On-Time (OT) % - Percentage of orders delivered on or before the agreed delivery date.
+OT % = On-Time Orders / Total Orders
 
-Overall OTIF is **29.0%**, compared with the target of **75.0%**.
+In-Full (IF) % - Percentage of orders where the required quantity was completely fulfilled.
+IF % = In-Full Orders / Total Orders
 
-This represents a **-46.0 percentage-point gap**, indicating a substantial service-level issue.
-
-### 2. Both timeliness and fulfillment contribute to service failure
-
-Overall:
-
-- OT % = **59.0%**
-- IF % = **52.8%**
-
-The relatively low IF performance indicates that quantity fulfillment is an important contributor to OTIF failure, alongside delivery delays.
-
-### 3. Customer performance varies significantly
-
-Customer-level analysis shows substantial differences in OTIF performance.
-
-Several customers have OTIF gaps greater than **30 percentage points below target**, making them priority accounts for service recovery.
-
-### 4. Quantity shortfalls are concentrated among specific products
-
-The product shortfall analysis shows that a limited number of products account for a significant portion of the overall quantity shortfall.
-
-These products should be investigated for:
-
-- Inventory availability
-- Replenishment issues
-- Demand planning
-- Allocation problems
-- Stock-out patterns
-
-### 5. Delivery delays remain an operational concern
-
-The delivery distribution highlights the proportion of deliveries that are:
-
-- Early
-- On-Time
-- 1 day late
-- 2 days late
-- 3 days late
-
-This provides an operational view of delivery reliability and helps identify opportunities to improve delivery planning.
-
----
-
-## 🚨 Recovery Priorities
-
-Based on the analysis, the recommended recovery priorities are:
-
-### Priority 1 – Improve OTIF Performance
-
-The overall **29% OTIF** performance is substantially below the **75% target**.
-
-**Action:**
-Focus on the major contributors to OTIF failure rather than treating all service issues equally.
-
-### Priority 2 – Protect High-Risk Customers
-
-Customers with the largest OTIF gaps should receive immediate attention.
-
-**Action:**
-Develop customer-specific recovery plans and monitor their OTIF performance regularly.
-
-### Priority 3 – Reduce Quantity Shortfalls
-
-Products with the highest quantity shortfalls should be prioritized.
-
-**Action:**
-Review inventory availability, replenishment cycles, demand forecasts, and product allocation.
-
-### Priority 4 – Reduce Delivery Delays
-
-Late deliveries directly reduce OTIF performance.
-
-**Action:**
-Investigate recurring delivery delays and improve dispatch, route planning, and delivery execution.
-
-### Priority 5 – Monitor Service Performance Continuously
-
-OTIF should be monitored at the **daily, city, customer, and product levels**.
-
-**Action:**
-Use the control tower dashboard as a recurring performance-monitoring tool rather than a one-time report.
-
----
-
-## 🛠️ Tools & Technologies
-
-- **Power BI** – Dashboard development and visualization
-- **Power Query** – Data transformation and preparation
-- **DAX** – KPI calculations and performance measures
-- **Excel** – Initial data exploration and validation
-
----
-
-## 📐 Key Metrics
-
-### On-Time %
-Measures the percentage of orders delivered on or before the agreed delivery date.
-
-### In-Full %
-Measures the percentage of orders where the requested quantity was fulfilled completely.
-
-### IF % = In-Full Orders / Total Orders
-
-### OTIF %
-Measures orders that were both delivered on-time and fulfilled completely.
+On-Time & In-Full (OTIF) % - Percentage of orders that were both delivered on time and fulfilled completely.
 OTIF % = OTIF Orders / Total Orders
 
-### OTIF Gap
-Measures the difference between actual OTIF performance and the target.
+OTIF Gap - Difference between actual OTIF performance and the target.
 OTIF Gap = OTIF % - OTIF Target
 
-Ex: 29.0% - 75.0% = -46.0 percentage points
+Example:
+29.0% - 75.0% = -46.0 percentage points
 
+🔄 Analysis Workflow
 
-💡 Business Impact
-The analysis helps supply chain management move from reactive reporting to proactive service recovery.
+Operational Order Data
+        ↓
+Data Cleaning & Transformation
+        ↓
+Data Modeling
+        ↓
+OT / IF / OTIF KPI Development
+        ↓
+Target Comparison
+        ↓
+Customer & City Analysis
+        ↓
+Service Failure Analysis
+        ↓
+Product Quantity Shortfall Analysis
+        ↓
+Delivery Delay Analysis
+        ↓
+Customer Risk Identification
+        ↓
+Recovery Prioritization
+        ↓
+Power BI Service Control Tower
 
-The dashboard enables decision-makers to:
-Identify customers at risk
-Prioritize service recovery
-Detect major OTIF gaps
-Identify product-level fulfillment issues
+💼 Business Impact
+The dashboard helps transform supply chain reporting from descriptive monitoring into action-oriented service management.
+
+It enables decision-makers to:
+
+Identify customers requiring immediate attention
+Prioritize OTIF performance gaps
+Detect city-level service issues
+Identify products contributing to incomplete fulfillment
 Monitor delivery reliability
-Compare performance against targets
-Focus operational resources on the highest-impact problems
+Compare actual performance against service targets
+Focus operational improvement efforts on high-impact areas
 
-📌 Portfolio Highlights
-This project demonstrates practical skills in:
+The analysis provides a structured approach for customer service recovery and supply chain performance improvement.
 
-Data cleaning and transformation
-KPI development
-DAX
-Power BI dashboard design
+🛠️ Tools & Technologies:
+Tool	                    Purpose
+Power BI Desktop	        Dashboard development and visualization
+Power Query            	  Data cleaning and transformation
+DAX	                      KPI calculations and performance measures
+Excel	                    Initial data exploration and validation
+
+📁 Project Structure
+QuickBite Express-Supply-Chain-Analytics/
+|
+├── Screenshots/
+│   ├── dashboard_overview.png
+│   └── customer_recovery_analysis.png
+|
+├── dashboard/
+│   └── QuickBite_Express_Supply_Chain.pbix
+│
+└── README.md
+
+Dataset Note: The source dataset is not included in this repository. The project focuses on the analytical methodology, Power BI dashboard, KPI development, insights, and business recommendations.
+
+⭐ Portfolio Highlights
+This project demonstrates practical experience in:
+
+Power BI dashboard development
+Power Query data transformation
+DAX measure development
 Supply chain analytics
-Customer risk analysis
-Root-cause analysis
+OT / IF / OTIF analysis
+Customer service risk analysis
 Performance benchmarking
-Business-focused storytelling
-Actionable recommendations
-👤 Project Type
+Root-cause analysis
+Product fulfillment analysis
+Business-focused data storytelling
+Translating analytics into recovery priorities
 
-Portfolio Project – Data Analytics / Supply Chain Analytics
+📌 Project Type
+Portfolio Project | Data Analytics | Supply Chain Analytics
 
 Domain: FMCG / Supply Chain
 Primary Tool: Power BI
 Focus: OTIF Performance, Customer Service Risk & Recovery
-```text
-
-
-
